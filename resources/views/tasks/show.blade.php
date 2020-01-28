@@ -23,9 +23,6 @@
                                 <td>{{ $task->birthDate }}</td>
                             </tr>
 
-                            <tr>
-                                <td>{{ $category->name }}</td>
-                            </tr>
                         </table>
 
 

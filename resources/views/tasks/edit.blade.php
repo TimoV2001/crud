@@ -25,20 +25,7 @@
                             {!! Form::date('birthDate', null, ['class' => 'form-control']) !!}
                         </div>
 
-                        <div class="form-group">
-                            <label>Job</label>
-                            <select name="category->id" class="form-control">
-                                @foreach ($categories as $id => $name)
-                                    <option value="{{ $category->id }}"
-                                    @if ($categories ->id === $post->category_id)
-                                        select
-                                        @endif
-                                    >
-                                        {{ $categories ->name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                        </div>
+
 
                         <div class="form-group">
                             {!! Form::button('Update',['type'=>'submit', 'class'=>'btn btn-primary']) !!}

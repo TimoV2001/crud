@@ -18,7 +18,6 @@ class CreateTasks extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->date('birthDate');
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
