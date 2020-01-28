@@ -15,10 +15,12 @@ class CreateTasks extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('firstName');
-            $table->string('lastName');
-            $table->date('birthDate');
-            $table->timestamps();
+            $table->string('fullName')->unique();
+            $table->string('phoneNumber')->unique();
+            $table->date('Date');
+            $table->Time('Time');
+            $table->tinyInteger('Table')->unique();
+            $table->tinyInteger('Amount');
         });
     }
 

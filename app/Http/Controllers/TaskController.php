@@ -28,12 +28,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        $categories = Category::select(['name', 'id'])->get()->pluck('name', 'id');
-
-
-        return view('tasks.create', ['categories' => $categories]);
-
-
+        return view('tasks.create');
 
     }
 
@@ -46,7 +41,7 @@ class TaskController extends Controller
     public function store(TaskRequest $request)
     {
         Task::create($request->all());
-        return redirect()->route('task.index')->with('message','item has been added successfully');
+        return redirect()->route('task.index')->with('message','Reservation has been added successfully');
     }
 
     /**
@@ -57,8 +52,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        $categories = Category::all();
-        return view ('tasks.show',compact('task','categories'));
+        return view ('tasks.show',compact('task'));
     }
 
     /**
@@ -82,7 +76,7 @@ class TaskController extends Controller
     public function update(TaskRequest $request, Task $task)
     {
         $task->update($request->all());
-        return redirect()->route('task.index')->with('message','item has been updated successfully');
+        return redirect()->route('task.index')->with('message','Reservation has been updated successfully');
 
     }
 
@@ -95,6 +89,6 @@ class TaskController extends Controller
     public function destroy(Task $task)
     {
         $task->delete();
-        return redirect()->route('task.index')->with('message','item has been deleted successfully');
+        return redirect()->route('task.index')->with('message','Reservation has been deleted successfully');
     }
 }

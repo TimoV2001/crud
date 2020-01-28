@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $fillable = ['firstName', 'lastName', 'birthDate'];
+    protected $fillable = ['fullName', 'phoneNumber', 'Date', 'Time', 'Table', 'Amount'];
+
+    public $timestamps = false;
 
 }

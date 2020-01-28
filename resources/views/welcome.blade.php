@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{url('/task')}}">Employees</a>
+                    <a href="{{url('/task')}}">Reservation</a>
 
                 </div>
             </div>

@@ -24,11 +24,17 @@ class TaskRequest extends FormRequest
     public function rules()
     {
         return [
-            'firstName' => 'required',
+            'fullName' => 'required',
 
-            'lastName'  => 'required',
+            'phoneNumber'  => 'required',
 
-            'birthDate' => 'required'
+            'Date' => 'required',
+
+            'Time' => 'required',
+
+            'Table' => 'required',
+
+            'Amount' => 'required',
         ];
     }
 }
